@@ -9,7 +9,6 @@ def format(file, first, last):
         csvreader = csv.DictReader(file)
         for row in csvreader:
             array.append(f"{row[first]} {row[last]}")
-        print(array)
     return array    
 
 def write(data, file, first, last):
@@ -26,7 +25,7 @@ def write(data, file, first, last):
             writer.writerow([last, first])
 
 
-def bubbleSort(array):
+def bubble_sort(array):
     start = time.time()
     n = len(array)
 
@@ -47,8 +46,63 @@ def bubbleSort(array):
             break
     print(end - start)
 
-def mergeSort(array):
-    pass
+def merge_sort(array):
+    # Recursivo
+    if len(array) > 1:
+        # Divide el array en dos mitades
+        left_array = array[:len(array)//2]
+        right_array = array[len(array)//2:]
 
-def quickSort(array):
-    pass 
+        # Recursivamente
+        merge_sort(left_array)
+        merge_sort(right_array)
+
+        # Merge
+        # Comparamos los elementos
+        i = 0 # compara el elemento de la izquierda del array izquierdo
+        j = 0 # compara el elemento de la izquierda del array derecho
+        k = 0 # el index del array mergeado
+        while i < len(left_array) and j < len(right_array):
+            # Dividie entre apellido y nombre y compara los apellidos
+            if left_array[i].split()[0] < right_array[j].split()[0]:
+                print(left_array[i].split()[0], right_array[j].split()[0])
+                array[k] = left_array[i]
+                i += 1
+            else:
+                array[k] = right_array[j]
+                j += 1
+            k += 1
+
+        while i < len(left_array):
+            array[k] = left_array[i]
+            i += 1
+            k += 1
+
+        while j < len(right_array):
+            array[k] = right_array[j]
+            j += 1
+            k += 1
+
+
+def quicksort(array, left, right):
+    if left < right:
+        partition_pos = partition(array, left, right)
+        quicksort(array, left, partition_pos - 1)
+        quicksort(array, partition_pos + 1, right)
+
+def partition(array, left, right):
+    i = left
+    j = right - 1
+    pivot = array[right]
+
+    while i < j:
+        while i < right and array[i] < pivot:
+            i += 1
+        while j > left and array[j] >= pivot:
+            j -= 1
+        if i < j:
+            array[i], array[j] = array[j], array[i]
+    if array[i] > pivot:
+        array[i], array[right] = array[right], array[i]
+    
+    return i

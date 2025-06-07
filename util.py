@@ -1,5 +1,5 @@
-import time
 import csv
+from faker import Faker
 
 # tema claro
 
@@ -26,7 +26,6 @@ def write(data, file, first, last):
 
 
 def bubble_sort(array):
-    start = time.time()
     n = len(array)
 
     # Para los elementos i de la longitud del array
@@ -42,9 +41,7 @@ def bubble_sort(array):
                 array[j], array[j+1] = array[j+1], array[j]
                 swapped = True
         if (swapped == False):
-            end=time.time()
             break
-    print(end - start)
 
 def merge_sort(array):
     # Recursivo
@@ -65,7 +62,6 @@ def merge_sort(array):
         while i < len(left_array) and j < len(right_array):
             # Dividie entre apellido y nombre y compara los apellidos
             if left_array[i].split()[0] < right_array[j].split()[0]:
-                print(left_array[i].split()[0], right_array[j].split()[0])
                 array[k] = left_array[i]
                 i += 1
             else:
@@ -106,3 +102,32 @@ def partition(array, left, right):
         array[i], array[right] = array[right], array[i]
     
     return i
+
+# Este codigo es para crear listas de nombres aleatorias
+
+# Reutilizamos write
+
+# lista = []
+# faker = Faker()
+# for _ in range(10):
+#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+
+# write(lista, "nombres-10.csv", "Apellido", "Nombre")
+
+# lista = []
+# for _ in range(100):
+#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+
+# write(lista, "nombres-100.csv", "Apellido", "Nombre")
+
+# lista = []
+# for _ in range(1000):
+#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+
+# write(lista, "nombres-1000.csv", "Apellido", "Nombre")
+
+# lista = []
+# for _ in range(10000):
+#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+
+# write(lista, "nombres-10000.csv", "Apellido", "Nombre")

@@ -26,22 +26,25 @@ def write(data, file, first, last):
 
 
 def bubble_sort(array):
-    n = len(array)
+    n = len(array) # 2
+
+    # Como hay dos for loops anidados se ejecuta n * n
 
     # Para los elementos i de la longitud del array
-    for i in range(n):
+    for i in range(n): # n * n * lo que hay dentro del for loop
         swapped = False
 
         # Los ultimos elementos i ya estan en su lugar
-        for j in range(0, n-i-1):
+        for j in range(0, n-i-1): # n * lo que hay dentro de este for loop
             # Se mueve a traves del array de 0 a n-i-1
             # Cambia si el elemento encontrado es mayor
             # que el siguiente elemento
-            if array[j][0] > array[j+1][0]:
-                array[j], array[j+1] = array[j+1], array[j]
-                swapped = True
+            if array[j][0] > array[j+1][0]: # 3 * n * n
+                array[j], array[j+1] = array[j+1], array[j] # 2
+                swapped = True # 1
         if (swapped == False):
             break
+
 
 def merge_sort(array):
     # Recursivo
@@ -79,7 +82,6 @@ def merge_sort(array):
             j += 1
             k += 1
 
-
 def quicksort(array, left, right):
     if left < right:
         partition_pos = partition(array, left, right)
@@ -107,27 +109,27 @@ def partition(array, left, right):
 
 # Reutilizamos write
 
-# lista = []
-# faker = Faker()
-# for _ in range(10):
-#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+lista = []
+faker = Faker()
+for _ in range(10):
+    lista.append(f"{faker.last_name()} {faker.first_name()}")
 
-# write(lista, "nombres-10.csv", "Apellido", "Nombre")
+write(lista, "nombres-10.csv", "Apellido", "Nombre")
 
-# lista = []
-# for _ in range(100):
-#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+lista = []
+for _ in range(100):
+    lista.append(f"{faker.last_name()} {faker.first_name()}")
 
-# write(lista, "nombres-100.csv", "Apellido", "Nombre")
+write(lista, "nombres-100.csv", "Apellido", "Nombre")
 
-# lista = []
-# for _ in range(1000):
-#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+lista = []
+for _ in range(1000):
+    lista.append(f"{faker.last_name()} {faker.first_name()}")
 
-# write(lista, "nombres-1000.csv", "Apellido", "Nombre")
+write(lista, "nombres-1000.csv", "Apellido", "Nombre")
 
-# lista = []
-# for _ in range(10000):
-#     lista.append(f"{faker.last_name()} {faker.first_name()}")
+lista = []
+for _ in range(10000):
+    lista.append(f"{faker.last_name()} {faker.first_name()}")
 
-# write(lista, "nombres-10000.csv", "Apellido", "Nombre")
+write(lista, "nombres-10000.csv", "Apellido", "Nombre")

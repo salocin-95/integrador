@@ -46,7 +46,7 @@ Elegimos como caso práctico el análisis de un código en **Python** que contie
 1. **Cloná el repositorio**
 2. Asegurate de tener la versión correcta de python (3.7 o superior):
  ```bash
-   python --version
+    python --version
 ```
 3. Ejecuta util.py para crear los archivos .csv de nombres desordenados:
 ```bash

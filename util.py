@@ -1,8 +1,6 @@
 import csv
 from faker import Faker
 
-# tema claro
-
 def format(file, first, last):
     with open(file, 'r') as file:
         array=[]
@@ -12,14 +10,11 @@ def format(file, first, last):
     return array    
 
 def write(data, file, first, last):
-    #Open a CSV file for writing
     with open(file, 'w', newline="") as file:
         writer = csv.writer(file)
 
-        # Write the header
         writer.writerow([first, last])
 
-        # Write each split name
         for full_name in data:
             last, first = full_name.split()
             writer.writerow([last, first])

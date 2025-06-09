@@ -39,3 +39,16 @@ El análisis de algoritmos permite:
 ## 🧪 Caso Práctico
 
 Elegimos como caso práctico el análisis de un código en **Python** que contiene una **lista de nombres y apellidos desordenados**. Aplicamos diferentes algoritmos de ordenamiento y analizamos cuál resulta más eficiente para este escenario.
+
+---
+
+## ✅ Conclusiones
+
+El análisis de algoritmos es esencial para desarrollar software eficiente. Este trabajo nos permitió:
+
+- Comprender que no todos los algoritmos tienen el mismo rendimiento para un mismo problema.
+- Valorar el análisis teórico como herramienta para anticipar eficiencia sin ejecutar código.
+- Ver la importancia de elegir bien un algoritmo, incluso en tareas simples como ordenar una lista.
+- Fortalecer nuestras habilidades para comparar soluciones y tomar decisiones técnicas informadas.
+
+---

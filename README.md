@@ -76,3 +76,6 @@ El análisis de algoritmos es esencial para desarrollar software eficiente. Este
 - Fortalecer nuestras habilidades para comparar soluciones y tomar decisiones técnicas informadas.
 
 ---
+
+## 🎥 Video Explicativo:
+[Click Aquí](https://www.youtube.com/watch?v=7NVEehWHk64)

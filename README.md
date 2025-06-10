@@ -60,10 +60,10 @@ Elegimos como caso práctico el análisis de un código en **Python** que contie
 Ejemplo de salida:
 ```bash
     Lista original:
-    ['Zoe Martínez', 'Ana Gómez', 'Pedro López', 'Carlos Torres']
+    ['Martínez Zoe', 'Gómez Ana', 'López Pedro', 'Torres Carlos']
 
     Lista ordenada:
-    ['Ana Gómez', 'Carlos Torres', 'Pedro López', 'Zoe Martínez']
+    ['Gómez Ana', 'Martinez Zoe', 'López Pedro', 'Torres Carlos']
 ```
 
 ## ✅ Conclusiones

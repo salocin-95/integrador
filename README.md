@@ -63,7 +63,7 @@ Ejemplo de salida:
     ['Martínez Zoe', 'Gómez Ana', 'López Pedro', 'Torres Carlos']
 
     Lista ordenada:
-    ['Gómez Ana', 'Martinez Zoe', 'López Pedro', 'Torres Carlos']
+    ['Gómez Ana', 'López Pedro', 'Martínez Zoe', 'Torres Carlos']
 ```
 
 ## ✅ Conclusiones

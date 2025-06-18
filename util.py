@@ -1,7 +1,7 @@
 import csv
 from faker import Faker
 
-# Crea listas de nombres a partir de archivos .csvW
+# Crea listas de nombres a partir de archivos .csv
 def format(file, first, last):
     with open(file, 'r') as file:
         array=[]
@@ -11,7 +11,7 @@ def format(file, first, last):
             array.append(f"{row[first]} {row[last]}")
     return array    
 
-# Crea archivos .csv a partir de listas de nobmres
+# Crea archivos .csv a partir de listas de nombres
 def write(data, file, first, last):
     with open(file, 'w', newline="") as file:
         writer = csv.writer(file)
